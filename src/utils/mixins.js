@@ -1,10 +1,10 @@
 import { css } from "styled-components";
 
 export const circle = (color, size = "8px") => css`
-    width: ${size};
-    height: ${size};
-    border-radius: 50%;
-    background-color: ${color};
+  width: ${size};
+  height: ${size};
+  border-radius: 50%;
+  background-color: ${color};
 `;
 
 export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
@@ -39,3 +39,10 @@ export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
       opacity: 0.6;
     }
   `;
+
+export const card = (radius = "6px", padding = "20px 30px") => css`
+  padding: ${padding};
+  background: ${({ theme }) => theme.background};
+  box-shadow: 0px 18px 40px 0px rgba(0, 0, 0, 0.04);
+  border-radius: ${radius};
+`;
