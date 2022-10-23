@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledIcon from "./style";
+import SocialIcon from "./SocialIcon";
 
 function Icon({ icon: IconComponent, width = 24, height = 24, color, opacity, ...rest }) {
   return (
@@ -9,6 +10,8 @@ function Icon({ icon: IconComponent, width = 24, height = 24, color, opacity, ..
     </StyledIcon>
   );
 }
+
+Icon.Social = SocialIcon;
 
 Icon.propTypes = {
   icon: PropTypes.element,
