@@ -1,11 +1,14 @@
-import './App.css';
-import Button from './Button.js';
-import useColorSwtich from './useColorSwitch';
+import React from "react";
+import ChatApp from "components/ChatApp";
+import { ThemeProvider } from "styled-components";
+import theme from "theme";
 
 function App() {
-  const [color, handleButton1Click] = useColorSwtich();
-  const [color2, handleButton2Click] = useColorSwtich("#0000ff", "#ff00ff");
-  return <div></div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <ChatApp />
+    </ThemeProvider>
+  );
 }
 
 export default App;
