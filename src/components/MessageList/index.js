@@ -11,6 +11,8 @@ import Input from "components/Input";
 import MessageCard from "components/MessageCard";
 
 import face1 from "assets/images/face-male-1.jpg";
+import face2 from "assets/images/face-male-2.jpg";
+import face4 from "assets/images/face-male-4.jpg";
 import FilterList from "components/FilterList";
 
 function MessageList({ children, ...rest }) {
@@ -18,20 +20,15 @@ function MessageList({ children, ...rest }) {
     <StyledMessageList {...rest}>
       <FilterList options={["最新消息优先", "在线好友优先"]} actionLabel="创建会话">
         <ChatList>
-          {[1, 2, 3, 4, 5, 6].map((_, index) => (
-            <MessageCard
-              key={index}
-              active={index === 3}
-              replied={index % 3 === 0}
-              avatarSrc={face1}
-              name="李铭浩"
-              avatarStatus="online"
-              statusText="在线"
-              time="3 小时之前"
-              message="即使爬到最高的山上，一次也只能脚踏实地地"
-              unreadCount={2}
-            />
-          ))}
+          <MessageCard key={1} active replied avatarSrc={face1} name="尼采"
+            avatarStatus="online" statusText="在线" time="1 分钟前"
+            message="上帝已死" />
+          <MessageCard key={2} avatarSrc={face2} name="黑格尔"
+            avatarStatus="online" statusText="在线" time="2 小时前"
+            message="存在的即是合理的" unreadCount={2} />
+          <MessageCard key={3} replied avatarSrc={face4} name="纪伯伦"
+            avatarStatus="online" statusText="在线" time="3 天前"
+            message="不要因为走得太远而忘记为什么出发" />
         </ChatList>
       </FilterList>
     </StyledMessageList>

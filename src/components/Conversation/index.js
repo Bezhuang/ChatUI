@@ -7,22 +7,20 @@ import VoiceMessage from "components/VoiceMessage";
 import Emoji from "components/Emoji";
 import Footer from "components/Footer";
 
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
   return (
     <StyledConversation {...rest}>
-      <TitleBar />
+      <TitleBar onAvatarClick={onAvatarClick} onVideoClicked={onVideoClicked} />
       <Conversations>
-        <ChatBubble time="昨天 下午14：26">Hi 小宇，忙什么呢？</ChatBubble>
-        <MyChatBubble time="昨天 下午16：30">
-          Hello 啊！最近就是一直在加班改 bug，然后 怼产品，怼 UI，各种怼！
-        </MyChatBubble>
-        <ChatBubble time="昨天 下午18：30">
-          <VoiceMessage time="01:24" />
+        <ChatBubble time="昨天 下午1:30">
+          <VoiceMessage time="00:13" />
         </ChatBubble>
-        <MyChatBubble time="昨天 下午16：30">
-          明天约一把王者荣耀，不连赢5把不罢休 🤘
-          <Emoji label="smile">🤘</Emoji>
+        <ChatBubble time="上午9:42">那些没能杀死我的，使我更坚强。</ChatBubble>
+        <ChatBubble time="上午11:38">每个不曾起舞的日子，都是对生命的辜负。</ChatBubble>
+        <MyChatBubble time="下午4:00">阳光强烈的地方，阴影深邃。
+          <Emoji label="smile">😈</Emoji>
         </MyChatBubble>
+        <ChatBubble time="下午4:22">上帝已死</ChatBubble>
       </Conversations>
       <Footer />
     </StyledConversation>

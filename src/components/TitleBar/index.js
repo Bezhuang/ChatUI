@@ -14,19 +14,18 @@ import { DropdownItem } from "components/Dropdown/style";
 import Seperator from "components/Seperator";
 import Dropdown from "components/Dropdown";
 
-function TitleBar({ children, ...rest }) {
+function TitleBar({ onAvatarClick, onVideoClicked, children, ...rest }) {
   return (
     <StyledTitleBar {...rest}>
-      <Avatar status="offline" src={face} />
+      <Avatar onClick={onAvatarClick} status="offline" src={face} />
       <Title>
-        <Paragraph size="large">慕容天宇</Paragraph>
+        <Paragraph size="large">歌德</Paragraph>
         <Paragraph type="secondary">
-          <Text>离线</Text>
-          <Text>· 最后阅读：3小时前</Text>
+          <Text>手机在线-5G📱</Text>
         </Paragraph>
       </Title>
       <Actions>
-        <Icon opacity={0.3} icon={Call} />
+        <Icon opacity={0.3} icon={Call} onClick={onVideoClicked} />
         <Icon opacity={0.3} icon={Camera} />
         <Dropdown
           content={

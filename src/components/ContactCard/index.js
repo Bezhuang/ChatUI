@@ -8,8 +8,8 @@ function ContactCard({ children, ...rest }) {
   return (
     <StyledContactCard {...rest}>
       <Avatar src={face} status="online" />
-      <Name>李浩</Name>
-      <Intro>我是前端工程师</Intro>
+      <Name>尼采</Name>
+      <Intro>所有的偏见源自内心。</Intro>
     </StyledContactCard>
   );
 }

@@ -11,7 +11,7 @@ export default {
 export const Default = () => (
   <MessageCard
     avatarSrc={face1}
-    name="李铭浩"
+    name="尼采"
     avatarStatus="online"
     statusText="在线"
     time="3 小时之前"
@@ -23,7 +23,7 @@ export const Default = () => (
 export const Active = () => (
   <MessageCard
     avatarSrc={face1}
-    name="李铭浩"
+    name="尼采"
     avatarStatus="online"
     statusText="在线"
     time="3 小时之前"
@@ -36,7 +36,7 @@ export const Active = () => (
 export const Replied = () => (
   <MessageCard
     avatarSrc={face1}
-    name="李铭浩"
+    name="尼采"
     avatarStatus="online"
     statusText="在线"
     time="3 小时之前"
@@ -50,7 +50,7 @@ export const Replied = () => (
 export const RepliedInactive = () => (
   <MessageCard
     avatarSrc={face1}
-    name="李铭浩"
+    name="尼采"
     avatarStatus="online"
     statusText="在线"
     time="3 小时之前"

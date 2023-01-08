@@ -17,9 +17,9 @@ import Emoji from "components/Emoji";
 import Icon from "components/Icon";
 
 import {
-  faWeibo,
+  faWeixin,
   faGithub,
-  faLinkedin,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import Seperator from "components/Seperator";
 import Text from "components/Text";
@@ -80,7 +80,7 @@ function Profile({
           margin-bottom: 12px;
         `}
       >
-        慕容天宇
+        歌德
       </Paragraph>
       <Paragraph
         size="medium"
@@ -89,24 +89,24 @@ function Profile({
           margin-bottom: 18px;
         `}
       >
-        北京市 朝阳区
+        上海市 虹口区
       </Paragraph>
       <Paragraph
         css={`
+          align: center;
           margin-bottom: 26px;
         `}
       >
-        帮助客户构建网站，并协助在社交网站上进行推广{" "}
-        <Emoji label="fire">🔥</Emoji>
+        人每天至少应该听一首小歌、读一卷好诗、赏一幅美画，如果可以，再说几句通情达理的话。
       </Paragraph>
       <SocialLinks>
         <Icon.Social
-          icon={faWeibo}
-          bgColor="#F06767"
-          href="http://www.weibo.com"
+          icon={faWeixin}
+          bgColor="green"
+          href="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg"
         />
-        <Icon.Social icon={faGithub} bgColor="black" />
-        <Icon.Social icon={faLinkedin} bgColor="#2483C0" />
+        <Icon.Social icon={faGithub} bgColor="black" href="https://github.com/Bezhuang" />
+        <Icon.Social icon={faYoutube} bgColor="red" />
       </SocialLinks>
       <Seperator
         css={`
@@ -114,9 +114,10 @@ function Profile({
         `}
       />
       <ContactSection>
-        <Description label="联系电话">+86 18688888888</Description>
-        <Description label="电子邮件">admin@fh.com</Description>
-        <Description label="个人网站">https://zxuqian.cn</Description>
+        <Description label="联系电话">+86 13818993049</Description>
+        <Description label="电子邮件">bezhuang@outlook.com</Description>
+        <Description label="博客" href="https://blog.zhuangzhihao.top">
+          https://blog.zhuangzhihao.top</Description>
       </ContactSection>
       <Seperator
         css={`
